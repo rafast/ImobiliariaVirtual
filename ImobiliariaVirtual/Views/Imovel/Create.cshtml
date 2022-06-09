@@ -1,70 +1,77 @@
 ﻿@model Imovel
 
-<form method="post">
-    <div class="border p-3 mt-4">
-        <div class="row pb-2">
-            <h2 class="text-primary">Criar Imóvel</h2>
-            <hr />
-        </div>
-        @*<div asp-validation-summary="All"></div>*@
-    <div class="mb-3">
-        <label asp-for="Tipo"></label>
-        <input asp-for="Tipo" class="form-control" />
-        <span asp-validation-for="Tipo" class="text-danger"></span>
+    <div class="container">
+        <form method="post">
+            <div class="border p-3 mt-4">
+                <div class="row pb-2">
+                    <h2 class="text-primary">Criar Imóvel</h2>
+                    <hr />
+                </div>
+                <div class="row">
+                    <div class="col mb-3">
+                        <label asp-for="Tipo"></label>
+                        <input asp-for="Tipo" class="form-control" />
+                        <span asp-validation-for="Tipo" class="text-danger"></span>
+                    </div>
+                    <div class="col mb-3">
+                        <label asp-for="ValorVenda"></label>
+                        <input asp-for="ValorVenda" class="form-control" />
+                        <span asp-validation-for="ValorVenda" class="text-danger"></span>
+                    </div>
+                    <div class="col mb-3">
+                        <label asp-for="ValorLocacao"></label>
+                        <input asp-for="ValorLocacao" class="form-control" />
+                        <span asp-validation-for="ValorLocacao" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mb-3">
+                        <label asp-for="Endereco"></label>
+                        <input asp-for="Endereco" class="form-control" />
+                        <span asp-validation-for="Endereco" class="text-danger"></span>
+                    </div>
+                    <div class="col mb-3">
+                        <label asp-for="Numero"></label>
+                        <input asp-for="Numero" class="form-control" />
+                        <span asp-validation-for="Numero" class="text-danger"></span>
+                    </div>
+                    <div class="col mb-3">
+                        <label asp-for="Complemento"></label>
+                        <input asp-for="Complemento" class="form-control" />
+                        <span asp-validation-for="Complemento" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mb-3">
+                        <label asp-for="Bairro"></label>
+                        <input asp-for="Bairro" class="form-control" />
+                    </div>
+                    <div class="col mb-3">
+                        <label asp-for="Cidade"></label>
+                        <input asp-for="Cidade" class="form-control" />
+                        <span asp-validation-for="Cidade" class="text-danger"></span>
+                    </div>
+                    <div class="col mb-3">
+                        <label asp-for="Estado"></label>
+                        <input asp-for="Estado" class="form-control" />
+                        <span asp-validation-for="Estado" class="text-danger"></span>
+                    </div>
+                    <div class="col mb-3">
+                        <label asp-for="CEP"></label>
+                        <input asp-for="CEP" class="form-control" />
+                        <span asp-validation-for="CEP" class="text-danger"></span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:150px">Criar</button>
+                <a asp-controller="Imovel" asp-action="Index" class="btn btn-secondary" style="width:150px">
+                    Voltar para lista
+                </a>
+            </div>
+        </form>
     </div>
-    <div class="mb-3">
-        <label asp-for="ValorVenda"></label>
-        <input asp-for="ValorVenda" class="form-control" />
-        <span asp-validation-for="ValorVenda" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="ValorLocacao"></label>
-        <input asp-for="ValorLocacao" class="form-control" />
-        <span asp-validation-for="ValorLocacao" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="Endereco"></label>
-        <input asp-for="Endereco" class="form-control" />
-        <span asp-validation-for="Endereco" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="Numero"></label>
-        <input asp-for="Numero" class="form-control" />
-        <span asp-validation-for="Numero" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="Complemento"></label>
-        <input asp-for="Complemento" class="form-control" />
-        <span asp-validation-for="Complemento" class="text-danger"></span>
-    </div>
-        <div class="mb-3">
-            <label asp-for="Bairro"></label>
-            <input asp-for="Bairro" class="form-control" />
-        </div>
-        <div class="mb-3">
-            <label asp-for="Cidade"></label>
-            <input asp-for="Cidade" class="form-control" />
-            <span asp-validation-for="Cidade" class="text-danger"></span>
-        </div>
-        <div class="mb-3">
-            <label asp-for="Estado"></label>
-            <input asp-for="Estado" class="form-control" />
-            <span asp-validation-for="Estado" class="text-danger"></span>
-        </div>
-        <div class="mb-3">
-            <label asp-for="CEP"></label>
-            <input asp-for="CEP" class="form-control" />
-            <span asp-validation-for="CEP" class="text-danger"></span>
-        </div>
-        <button type="submit" class="btn btn-primary" style="width:150px">Criar</button>
-        <a asp-controller="Imovel" asp-action="Index" class="btn btn-secondary" style="width:150px">
-            Voltar para lista
-        </a>
-    </div>
-</form>
 
-@section Scripts{
-    @{
-        <partial name="_ValidationScriptsPartial" />
+    @section Scripts{
+        @{
+            <partial name="_ValidationScriptsPartial" />
+        }
     }
-}
