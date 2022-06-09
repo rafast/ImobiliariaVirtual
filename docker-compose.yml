@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  imobiliariavirtual:
+    image: ${DOCKER_REGISTRY-}imobiliariavirtual
+    build:
+      context: .
+      dockerfile: ImobiliariaVirtual/Dockerfile
